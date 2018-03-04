@@ -4,12 +4,29 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+let index = [{
+  path: '/',
+  name: 'NewsIndex',
+  component: resolve =>require(['../views/news.vue'], resolve)
+},
+{
+  path: '/vedio',
+  name: 'VedioIndex',
+  component: resolve => require(['../views/vedio.vue'], resolve)
+},
+{
+  path: '/locale',
+  name: 'LocaleIndex',
+  component: resolve => require(['../views/locale.vue'], resolve)
+},
+{
+  path: '/me',
+  name: 'MeIndex',
+  component: resolve => require(['../views/me.vue'], resolve)
+}]
+
+const router = new Router( {
+  routes: index,
+  linkActiveClass: 'active',
 })
+export default router
