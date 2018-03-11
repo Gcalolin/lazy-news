@@ -1,0 +1,10 @@
+$primary-color: #f13329;
+
+.mint-tab-container-wrap {
+  display: block;
+}
+.mint-navbar .mint-tab-item.is-selected {
+  color: $primary-color;
+  // border-bottom: 2px solid $primary-color;
+  border-bottom: none;
+}

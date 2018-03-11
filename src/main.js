@@ -3,12 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import api from './api'
+
 
 // import './scss/common.scss'
 
 import Mint from 'mint-ui'
 
-import 'mint-ui/lib/style.css'
+// import './scss/my-mint.scss'
+
 import './assets/iconfont/iconfont.css'
 
 Vue.use(Mint);

@@ -4,26 +4,33 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
-let index = [{
-  path: '/',
-  name: 'NewsIndex',
-  component: resolve =>require(['../views/news.vue'], resolve)
-},
-{
-  path: '/vedio',
-  name: 'VedioIndex',
-  component: resolve => require(['../views/vedio.vue'], resolve)
-},
-{
-  path: '/locale',
-  name: 'LocaleIndex',
-  component: resolve => require(['../views/locale.vue'], resolve)
-},
-{
-  path: '/me',
-  name: 'MeIndex',
-  component: resolve => require(['../views/me.vue'], resolve)
-}]
+let index = [
+  {
+    path: '/',
+    name: 'NewsIndex',
+    component: resolve =>require(['../views/news/news.vue'], resolve)
+  },
+  {
+    path: '/news-detail',
+    name: 'NewsDetail',
+    component: resolve => require(['../views/news/NewsDetail.vue'], resolve)
+  },
+  {
+    path: '/vedio',
+    name: 'VedioIndex',
+    component: resolve => require(['../views/vedio.vue'], resolve)
+  },
+  {
+    path: '/locale',
+    name: 'LocaleIndex',
+    component: resolve => require(['../views/locale.vue'], resolve)
+  },
+  {
+    path: '/me',
+    name: 'MeIndex',
+    component: resolve => require(['../views/me.vue'], resolve)
+  }
+]
 
 const router = new Router( {
   routes: index,

@@ -3,7 +3,7 @@
   <transition name="fade" mode="out-in">
     <router-view></router-view>
   </transition>
-  <tab-bar></tab-bar>
+  <tab-bar v-show="isMainView"></tab-bar>
 </div>
 </template>
 
@@ -16,14 +16,21 @@ export default {
       selected: ''
     }
   },
+  computed: {
+    isMainView() {
+      return this.$route.name === 'NewsIndex' || this.$route.name === 'VedioIndex' || this.$route.name === 'LocaleIndex' || this.$route.name === 'MeIndex'
+    }
+  },
   components: {
     'tab-bar': tabbar
-  }
+  },
 }
 </script>
 
 <style lang="scss">
 @import 'scss/common.scss';
+@import 'scss/my-mint.scss';
+@import 'mint-ui/lib/style.css';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
