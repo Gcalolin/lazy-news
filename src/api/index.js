@@ -27,7 +27,11 @@ export default {
 
   /*获取特定频道的新闻*/
   getSpecificChannelNews(params) {
-    return fetchGet('/get', params)
+    return fetchGet('/get', {
+        channel: params.currentChannel,
+        start: (params.currentPage - 1) * 10,
+        num: 10
+    })
   }
 
 }

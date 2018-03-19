@@ -34,6 +34,7 @@ export default {
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background: #fff;
 }
 /*组件切换的动画*/
 .fade-enter-active, .fade-leave-active {

@@ -8,7 +8,12 @@ let index = [
   {
     path: '/',
     name: 'NewsIndex',
-    component: resolve =>require(['../views/news/news.vue'], resolve)
+    component: resolve =>require(['../views/news/news2.vue'], resolve)
+  },
+  {
+    path: '/news2',
+    name: 'newsTest',
+    component: resolve => require(['../views/news/news2.vue'], resolve)
   },
   {
     path: '/news-detail',

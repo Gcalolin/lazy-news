@@ -20,7 +20,6 @@
       }
     },
     created() {
-      console.log('newsItem', this.newsItem)
     },
     props: {
       newsItem: {
